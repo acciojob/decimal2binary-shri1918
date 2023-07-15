@@ -1,6 +1,15 @@
+function convertToBinary() {
+  const decimalInput = document.getElementById('decimalInput');
+  const binaryResult = document.getElementById('binaryResult');
+
+  const decimalNumber = parseInt(decimalInput.value);
+  const binaryNumber = decimalToBinary(decimalNumber);
+
+  binaryResult.textContent = `Binary: ${binaryNumber}`;
+}
+
 function decimalToBinary(num) {
-  // Write your code here
-	if (num === 0) {
+  if (num === 0) {
     return '0';
   }
 
@@ -12,8 +21,6 @@ function decimalToBinary(num) {
   }
 
   return binary;
-}
-	
 }
 
 window.decimalToBinary = decimalToBinary;
